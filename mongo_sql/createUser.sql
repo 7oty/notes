@@ -25,3 +25,15 @@
  dbAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。
  root：只在admin数据库中可用。超级账号，超级权限
  */
+ /*连接mongodb数据库*/
+
+ /*mongodb://localhost连接本地数据库*/
+mongodb://admin:yourpassword@localhost/admin
+/*mongodb://username:password@remoteHost/database_name*/
+
+/*multi host and database connection*/
+mongodb://
+
+/*safe connection mongodb*/
+mongodb://localhost/?safe=true
+
