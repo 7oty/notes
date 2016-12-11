@@ -1,0 +1,11 @@
+#Nginx
+#
+#VERSION           0.0.1
+
+FROM ubuntu:14.04
+
+MAINTAINER seaungx L <Lseaungx@163.com>
+
+RUN  apt-get update && apt-get install -y inotify-tool nginx apache2 openssh-server
+
+EXPOSE 8088
