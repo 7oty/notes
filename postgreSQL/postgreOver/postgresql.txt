@@ -1,0 +1,45 @@
+0x00什么是数据库
+1，保存数据的仓库
+2，数据管理的方法和技术
+0x001数据库表：一系列二维数组的集合
+1，横向的行
+2，纵向的列
+0x002数据类型
+数据类型决定数据在计算机中存储的格式
+常用数据类型
+1，整型
+2，浮点型
+3，日期/时间型
+4，字符串型
+5，二进制类型
+0x003数据库系统主要的组成部分
+1，数据库
+2，数据库管理系统（数据库系统管理员）
+3，数据库应用程序（普通用户）
+0x004SQL语言
+SQL语言包含4部分
+1，DDL：DROP，CREATE，ALTER等
+2，DML：INSERT，UPDATE，DELETE语句
+3，DQL：SELFCT语句
+4，DCL：GRANT，REVOKE，COMMIT，ROLLBACK等
+0x005几种数据库访问技术
+1，ODBC：OPEN Database Connectivity（开放数据库连接）
+2，JDBC：Java Database Connectivity（java数据库连接）
+3，ADO.NET：.NET框架中用于和数据库交互的类库
+4，PDO：PHP Data Object（PHP语言访问数据库技术）
+0x006postgreSQL主要特点
+1，开源免费
+2，速度快
+3，平台可移植性
+4，丰富的接口
+5，面向对象特性
+6，安全性
+7，配合的开源软件有很多 
+0x007启动和关闭postgreSQL数据库
+启动：./pg_ctl -D /opt/PostgreSQL/9.6/data -l /opt/PostgreSQL/data/server.log
+-l 参数是启动时日志的存放位置
+关闭：./pg_ctl -D /opt/PostgreSQL/9.6/data
+0x008连接远程数据库服务需要注意的一些问题
+1，关闭防火墙
+2，修改服务器段连接监听（postgresql.cof配置文件）
+3，修改连接认证方式（pg_hba.conf配置文件）
