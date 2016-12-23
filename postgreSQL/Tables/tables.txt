@@ -1,0 +1,25 @@
+0x00 创建表
+create table student(
+    id int,
+    name varchar(20),
+    brithday date,
+    score numeric(5, 2)
+);
+
+0x001 修改表名
+alter table student rename to student1;
+
+0x002 修改表字段
+alter table student1 rename name to username;
+
+0x003 修改表类型
+alter table student1 alter column score type int;
+
+0x004 删除字段
+alter table student1 drop column brithday;
+
+0x005 增加字段
+alter table student1 add column address;
+
+0x006 删除表
+drop table student1;
