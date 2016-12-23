@@ -1,0 +1,19 @@
+0x00   创建数据库
+
+create database db_name;
+
+0x001  创建数据库时指定参数
+
+create database db_name with owner = username encoding = 'utf-8';
+
+0x002  修改数据库
+
+alter database db_name rename to db_name_2;
+
+0x003  修改数据库连接数
+
+alter database db_name connection limit 20;
+
+0x004  删除数据库
+
+drop database db_name;
