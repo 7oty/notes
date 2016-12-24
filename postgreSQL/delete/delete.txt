@@ -1,0 +1,19 @@
+数据删除
+0x00  条件删除
+    delete from tb_name where id = 4;
+    delete from tb_name birthday between '1999-09-09' and '1999-09-08';
+0x01  删除所有数据
+    delete from tb_name;
+0x02  清空数据
+    truncate table tb_name;
+
+0x03  delete和trucncate的比较
+    ==========================================
+    =                   = DELETE   = TRUNCATE=
+    ==========================================
+    = 执行速度           =    慢   =   快    =
+    = 可指定条件         =    可以 =   不可以=
+    = 语句分类           =    dml  =   ddl   =
+    = 可以回滚           =    可以 =   不可以=
+    = 删除操作记录日志   =    记录 =   不记录=
+    ==========================================
