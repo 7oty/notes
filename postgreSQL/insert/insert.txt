@@ -1,0 +1,12 @@
+数据插入操作
+0x00  单表数据插入
+    insert into tb_name values(1, 'fyk', '1999-10-09');
+    insert into tb_name (id, name, brithday) values(2, 'fyks', '1999-09-08');
+0x01  批量插入数据
+    insert into tb_name (id, name, brithday) values
+    (3, 'goys', '1999-09-09'),
+    (4, 'fday', '1999-09-08'),
+    (5, 'gays', '1999-09-07');
+    select语句批量插入数据
+    insert into new_tab select * from tb_name;
+    insert into new_tab (id, name) select (id, name) from tb_name;
