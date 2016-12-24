@@ -1,0 +1,40 @@
+运算符
+0x00 算术运算符
+    -,+,*,/,%
+    select 3-2, 3+2, 3*2,3/2,3%2;
+
+0x01 比较运算符
+    = 等于运算符
+    <>(!=)不等于
+    <=,<,>=,>
+    LEAST 在两个或有多个参数时，返回最小值
+    GREATEST 在两个或者多个参数时，返回最大值
+    BETWEEN AND 判断一个值是否落在两个值之间
+    IN  判断一个值是否是IN列表中的任意一个值
+    LIKE    通配符匹配
+    
+    example:
+        select 1=0, '2'=2, 'b'='b', null=null, null=1;
+        select 'good'<>'god', 1<>2, 1>2, 4!=4, 1>=1;
+        select 2 between 1 and 3, 2 between 3 and 5, 2 between 3 and 5, 3 between 3 and 6;
+        select 2 in (2, 3, 4), 2 not in (2, 3, 4)
+        select 'abc' like 'a%', 'abc' like '_b_', 'abc' not like '%d';
+
+0x02 逻辑运算符
+    NOT 非  select not '1', not 'y', not '0', not 'n';
+    AND 且  select '1' and 'y', '1' and '0', '0' and 'n';
+    OR  或  select '1' or 'y', '1' or '0', '0' and 'n';
+
+0x03 运算符优先级
+    最低    =   (赋值运算符)
+    =================================================================
+            OR
+            AND
+            NOT
+            BETWEEN, CASE, WHEN, THEN, ELSE
+            =   (等于运算符), >=, >, <=, <, <>, !=, IS， LIKE， IN
+            -, +
+            *, /, %
+            -(符号)
+    =================================================================
+    最高    ！
