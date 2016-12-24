@@ -1,0 +1,7 @@
+数据更新
+0x00  指定条件更新数据
+    update tb_name set name='say' where id = 2;
+0x01   批量更新数据表
+    update tb_name set score = 0;
+0x02  指定更新结果插入到指定字段中
+    update tb_name set score = 1.1 + 2.3 where id = 2;
