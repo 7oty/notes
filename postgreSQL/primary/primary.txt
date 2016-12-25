@@ -1,0 +1,36 @@
+0x00 主键的创建
+create table emp(
+    id int primary key,
+    name varchar(30),
+    salary numberic(9, 2)
+);
+=========================
+create table emp1(
+    id int,
+    name varchar(30),
+    salary numberic(9, 2),
+    constraint pk_em primary key (id)
+);
+
+0x01 外键的创建
+create table dept(
+    id int primary key,
+    name varchar(30)
+);
+=========================
+create table emps(
+    id int primary key,
+    name varchar(30),
+    salary numberic(9, 2),
+    depId int,
+    constraint fk_em_emps foreign key (depId) references dept(id)
+);
+
+
+0x02 主键的作用
+1），唯一标识一条记录
+2），提高数据检索的效率
+
+0x03 外键的作用
+1），保证数据的完整性
+2），提高数据的检索的效率
