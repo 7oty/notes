@@ -1,0 +1,25 @@
+0x00 非空约束
+create table emp1(
+    id int primary key,
+    name varchar(30) not null,
+    salary numeric(9, 2)
+);
+
+0x01 唯一约束
+create table emp2(
+    id int primary key,
+    name varchar(30) not null,
+    phone varchar(30) unique,
+    salary numeric(9, 2)
+);
+
+0x02 默认约束
+create table emp3(
+    id int primary key,
+    name varchar(30) not null,
+    salary numeric(9, 2) deafult 0.0
+);
+
+0x03 约束的作用
+1），维护数据的完整性
+2），在业务层面上保证数据的正确性
