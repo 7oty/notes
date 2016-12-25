@@ -1,0 +1,36 @@
+0x00 简单查询
+    select * from tb_name;
+    select id name from tb_name;
+
+0x01 为表和字段指定别名
+    select tb_name.id tb_name.name from tb_name as tb;
+    select id as uid name as username from tb_name as tb;
+
+0x02 条件查询
+    select id name from tb_name where id = 9;
+
+0x03 in 和 not in 关键字查询
+    select id name from tb_name where id in (1, 2,3)
+    select id name from tb_name where id not in (2, 3, 4)
+
+0x04 between and查询
+    select id name from tb_name where id btween 2 and 3;
+    select id name from tb_name where id not btween 3 and 4;
+
+0x05 is null and is not null 查询
+    select id name from tb_name where id is null;
+    select id name from tb_name where id is not null;
+
+0x06 like 查询
+    select id name from tb_name where name like "_a_";
+    select id name from tb_name where name like "a%";
+    select id name from tb_name where name like "%a"
+
+0x07 ro 和 and查询
+    select id name from tb_name where id >= 3 and id < 3;
+    select id name from tb_name where id > 4 or id <=3;
+
+0x08 order by 查询
+    select id name from tb_name order by name;
+    select id name from tb_name order by name desc;
+    select id name from tb_name order by name asc;
