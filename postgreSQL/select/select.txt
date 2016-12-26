@@ -34,3 +34,8 @@
     select id name from tb_name order by name;
     select id name from tb_name order by name desc;
     select id name from tb_name order by name asc;
+
+0x09 limit 限制查询
+    select * from tb_name limit 5;
+    select * from tb_name limit 5 offset 5;//忽略前面五条数据
+    select * from tb_name limit 5 offset ((页码 - 1) * 5);
