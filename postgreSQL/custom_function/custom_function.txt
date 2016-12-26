@@ -1,0 +1,17 @@
+0x00 自定义函数
+    语法格式：
+        CREATE FUNCTION //声明创建函数
+            add(integer, integer)//定义函数名称参数类型
+        RETURNS integer //定义函数返回值
+            AS 'select $1 + $2;'//定义函数体
+        LANGUAGE SQL//定义实现函数的语言名字
+        RETURNS NULL ON NULL INPUT;//定义参数为NULL时处理情况
+
+0x01 函数的调用
+    select add(1,2)
+    select id, name, date add(salary, avg) from emp;
+
+0x02 删除函数
+    drop function function_name
+    exmaple:
+        drop function add;
