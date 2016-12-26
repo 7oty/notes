@@ -1,0 +1,13 @@
+0x00 UNION 对查询结果集的合并
+    select id, name, phone from tb1 where id = 1 union select id, name, phone from tb2 where id =2;
+
+0x01 UNION ALL对查询结果集的合并
+    select id, name, phone from tb1 where id = 1 union all select id, name, phone from tb2 where id =2;
+
+UNION 和 UNION ALL的比较
+
+==============================================
+=            =     UNION   =     UNION ALL   =
+=去除重复记录=     可以    =     不可以      =
+=执行速度    =     慢      =     快          =
+==============================================
