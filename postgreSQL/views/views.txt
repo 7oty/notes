@@ -1,0 +1,15 @@
+0x00 视图的创建
+    create view view_name as select id, name, salary from employee where id = 10 order by salary desc;
+
+0x01 视图的调用
+    select * from view_name;
+
+0x02 视图的删除
+    drop view_name;
+
+0x03 视图的作用
+    1），简单化
+    2），安全化
+    3），逻辑数据独立性
+
+note:视图就是一张虚拟的表，它具有表的特性，但它不存储实际的数据
