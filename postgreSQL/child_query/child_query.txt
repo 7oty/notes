@@ -1,0 +1,12 @@
+0x00 EXISTS 子查询
+    select * from tb1 exists(select id from tb2 where id =1);
+    select * from tb1 exists(select id from tb2 where id = 1 and name = "li");
+    select * from tb1 not exists(select id from tb2 where id = 1);
+
+0x01 IN 子查询
+    select * from tb1 in (select id from tb2 where id = 1);
+    select * from tb1 not in (select id from tb2 where id = 1);
+
+0x02 标量子查询
+    select id,name,(select dname || ' ' || daddress from tb2 where id = pid) as address from tb1;
+    //相当于把查询内容进行拼接
