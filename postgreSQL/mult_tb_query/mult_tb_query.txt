@@ -1,0 +1,12 @@
+0x00 原始多表查询
+    select id,name,address,phone from tb1,tb1;
+0x01 INNER JOIN进行多表连接查询
+    select id, name,address,phone from tb1 inner join tb2 on id = pid;
+
+0x02 LEFT JOIN进行多表连接查询
+    select id,name,address,phone from tb1 left join tb2 on id = pid where id = 10;
+    select id,name,address,phone from tb1 left outer join tb2 on id = pid where id = 10;
+
+0x03 RIGHT JOIN进行多表连接查询
+    select id,name,address,phone from tb1 right join tb2 on id = pid where id = 10;
+    select id,name,address,phone from tb1 right outer join tb2 on id = pid where id = 10;
