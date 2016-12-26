@@ -1,0 +1,22 @@
+0x00 启动Nginx
+    cd /usr/local/nginx/sbin
+    /usr/local/nginx/sbin/nginx -t /usr/local/nginx/conf/nginx.conf
+
+0x01 停止Nginx
+    方法1：从容停止
+        kill -QUIT nginx主进程号
+    方法2：快速停止
+        kill -TERM nignix主进程号
+        kill -INT nignix主进程号
+    方法3：强制停止
+        pkill -9 nginx
+
+0x02 重启nginx
+    重启前先验证nignx配置文件是否正确
+    方法1：/usr/local/nignx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf
+    方法2：./nginx -t
+
+    重启Nginx
+        方法1：./nginx reload
+        方法2：发送信号的方式
+            kill -HUP nginx主进程号
