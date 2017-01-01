@@ -1,0 +1,83 @@
+0x00 meta标签
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">ie兼容模式
+    <meta name="renderer" content="webkit">让部分浏览器默认采用高速模式渲染页面
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">添加响应式视口和移动设备优先的配置,最大和最小缩放比例
+
+0x01 container容器
+    .container:固定宽度并支持响应式布局的容器
+    .container-fluid:100%宽度，占满整个视口
+
+0x02 栅格系统
+    .row 和.col-xn-m组合来快速创建栅格布局系统
+    row必须包含在.container或.container-fulid中
+    1），栅格系统参数
+    -------------------------------------------------------------------------------------------
+    -           - 手机<768px - 平板>= 768px - 桌面显示器 >= 992px - 大桌面显示器 >= 1200px    -
+    -------------------------------------------------------------------------------------------
+    - 最大宽度  - None       - 750px        - 970px               - 1170px                    -
+    -------------------------------------------------------------------------------------------
+    - 列数      - 12                                                                          -
+    -------------------------------------------------------------------------------------------
+    - 最大列宽  - 自动       - ～62px       - ～81px              - ～97px                    -
+    -------------------------------------------------------------------------------------------
+    - 类前缀    - .col-xs-   - .col-sm-     - .col-md-            - .col-lg-                  -
+    -------------------------------------------------------------------------------------------
+    note:最多承载12个
+    2），列偏移
+        .col-md-offset-*：将列向右侧偏移
+    3），列顺序
+        .col-md-push和.col-md-pull改变列的顺序
+
+0x03 排版
+    1），标题
+        .h1-h6赋予文本标题的样式
+    2），中心内容
+        .lead 让段落突出显示
+    3），文本删除
+        <del>标签
+    4），内联文本元素
+        <mark>标签
+    5），小号文本
+        <small>标签
+    6），着重文本
+        <strong>
+    6），文本对齐
+        .text-left文本居左对齐
+        .text-center文本居中
+        .text-right文本居右对齐
+    7），改变大小写
+        .text-lowercase 文本全部小写
+        .text-uppercase 文本全部大写
+        .text-capitalize文本首字母大写
+    8），缩略语
+        <abbr>标签需设置title属性
+        example:
+            <abbr title="attribute">title</abbr>
+    9），地址
+        <address>标签
+    10），引用
+        <blockquote>标签
+0x04 列表
+    1），无序列表
+        ul,li
+    2），有序列表
+        dl,dt,dd
+        .dl-horizontal水平排列
+        .text-overflow文本截断
+        .inline-block内联列表
+        .list-unstyle无样式列表
+0x05 表格
+    1），.table 为表格添加基本样式
+    2），.table-striped 添加条纹表格
+    3），.table-bordered 为表格添加边框
+    4），.table-hover 鼠标悬停
+    5），.table-cindensed 紧缩表格
+    6），状态类
+        a, .active 默认
+        b, .success 成功
+        c, .info 提示
+        d, .warning 警告
+        f, .danger 危险
+    7），响应式表格
+        .table-responsive
+
