@@ -1,0 +1,34 @@
+0x00 创建Ajax对象
+    var xhr = new ActiveXObject("Msxml2.XMLHTTP6.0");//在ie下时创建ajax对象
+    var xhr = new XMLHttpRequest()//主流浏览器创建ajax对象
+    example:
+        if (window.ActiveXObject){
+            var xhr = new ActiveXObject("Msxml2.XMLHTTP6.0");
+        }else{
+            var xhr = new XMLHttpRequest();
+        }
+0x01 向服务器发送请求
+    var xhr = new XMLHttpRequest();
+    method = "GET";
+    url = "../login";
+    xhr.open(method, url);
+    xhr.send(null);
+    readySatate:
+        0：创建ajax对象
+        1：调用open()方法
+        2：调用send()方法
+        3：到达服务器并开始回传服务器的答应
+        4：请求完成
+    exmaple:
+        function ajaxResponse(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.starus == 200){
+                    console.log(xhr.responseText);
+                }
+            }
+
+            xhr.open("GET", "./login");
+            xhr.send(null);
+
+        }
