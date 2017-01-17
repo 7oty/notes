@@ -11,3 +11,27 @@
     doc = {"name": "seaungx", "age": 12}
     postdb.insert(doc)
     postdb.remove()
+
+0x02 settings.py文件的设置
+    ITEM_PIPELINES = ['project_name.pipelines.one_class']
+    MONGO_HOST = '127.0.0.1'
+    MONGO_PORT = 27017
+    MONGO_DBNAME = 'DB_NAME'
+    MOGNO_DOCNAME = 'DOC_NMAE'
+
+0x03 pipelines.py 文件的设置
+    from scrapy.conf import settings
+    import pymongo
+    class YouClassPipelines(objects):
+        def __init__(self):
+            host = settings['MONGODB_HOST']
+            port = settings['MONGODB_PORT']
+            db_name = settings['MONGODB_DOCNAME']
+            client = pymongo.MongoClient(host=host, port=port)
+            db = client[db_name]
+            self.post = db[settings['MONGODB_DOCNAME']]
+
+        def process_item(self, item, spider):
+            info = dict(item)
+            self.post.insert(info)
+            return item
