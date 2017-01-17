@@ -1,0 +1,13 @@
+0x00 pymongo安装
+    pip install pymongo
+    or
+    easy_install pymongo
+
+0x01 基本操作
+    import pymongo
+    connection = pymongo.MongoClient()
+    dbtest = connection.db_name
+    postdb = dbtest.test
+    doc = {"name": "seaungx", "age": 12}
+    postdb.insert(doc)
+    postdb.remove()
